@@ -126,3 +126,6 @@ sudo dnf install -y helium-bin
 
 # Install Proton Pass
 sudo dnf install -y https://proton.me/download/PassDesktop/linux/x64/ProtonPass.rpm
+
+# Install Proton Authenticator
+sudo dnf install -y https://proton.me/download/authenticator/linux/ProtonAuthenticator.rpm
