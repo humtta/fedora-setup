@@ -78,3 +78,7 @@ sudo tee /etc/yum.repos.d/vscode.repo <<-'EOF' >/dev/null
 EOF
 
 sudo dnf install -y code
+
+# Install GitHub CLI
+sudo dnf config-manager addrepo --from-repofile=https://cli.github.com/packages/rpm/gh-cli.repo
+sudo dnf install -y gh
