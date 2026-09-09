@@ -97,3 +97,6 @@ sudo dnf install -y \
 	containerd.io \
 	docker-buildx-plugin \
 	docker-compose-plugin
+
+# Enable Docker to start at OS boot
+sudo systemctl enable --now docker
