@@ -119,3 +119,7 @@ sudo dnf install -y fish
 
 # Set Fish as default shell
 sudo usermod --shell "$(which fish)" "${USER}"
+
+# Install Helium
+sudo dnf copr enable -y imput/helium
+sudo dnf install -y helium-bin
