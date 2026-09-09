@@ -116,3 +116,6 @@ git config --global init.defaultBranch 'main'
 
 # Install Fish
 sudo dnf install -y fish
+
+# Set Fish as default shell
+sudo usermod --shell "$(which fish)" "${USER}"
