@@ -16,3 +16,6 @@ if [[
 	echo "Error: this script is intended for Fedora Workstation ${REQUIRED_VERSION} only" >&2
 	exit 1
 fi
+
+# Disable sudo timeout
+echo 'Defaults timestamp_timeout = -1' | sudo tee /etc/sudoers.d/timeout >/dev/null
