@@ -65,6 +65,14 @@ sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flat
 # Update installed packages
 sudo dnf update -y --refresh
 
+# Install fonts
+for font in fonts/*.zip; do
+	font_name="$(basename "${font}" .zip)"
+	sudo unzip -o "${font}" -d "/usr/share/fonts/${font_name}"
+done
+
+sudo fc-cache -f
+
 # Install Visual Studio Code
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 
