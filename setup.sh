@@ -85,3 +85,6 @@ sudo dnf install -y gh
 
 # Install Nix
 curl -fsSL https://install.determinate.systems/nix | sudo bash -s -- install --no-confirm
+
+# Install Devbox
+curl -fsSL https://get.jetify.com/devbox | sudo bash -s -- -f
