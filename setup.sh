@@ -124,6 +124,10 @@ sudo usermod --shell "$(which fish)" "${USER}"
 sudo dnf copr enable -y imput/helium
 sudo dnf install -y helium-bin
 
+# Install Obsidian
+sudo dnf copr enable -y kmf/Obsidian
+sudo dnf install -y obsidian
+
 # Install Proton Pass
 sudo dnf install -y https://proton.me/download/PassDesktop/linux/x64/ProtonPass.rpm
 
