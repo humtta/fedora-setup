@@ -6,14 +6,14 @@ set -eo pipefail
 source /etc/os-release
 
 # Check OS compatibility
-REQUIRED_VERSION='44'
+required_version='44'
 
 if [[
 	"${ID}" != 'fedora' || \
 	"${VARIANT_ID}" != 'workstation' || \
-	"${VERSION_ID}" != "${REQUIRED_VERSION}"
+	"${VERSION_ID}" != "${required_version}"
 ]]; then
-	echo "Error: this script is intended for Fedora Workstation ${REQUIRED_VERSION} only" >&2
+	echo "Error: this script is intended for Fedora Workstation ${required_version} only" >&2
 	exit 1
 fi
 
@@ -21,7 +21,7 @@ fi
 echo 'Defaults timestamp_timeout = -1' | sudo tee /etc/sudoers.d/timeout >/dev/null
 
 # Remove unwanted packages
-UNWANTED_PACKAGES=(
+unwanted_packages=(
 	baobab
 	firefox*
 	gnome-calendar
@@ -52,7 +52,7 @@ UNWANTED_PACKAGES=(
 	yelp*
 )
 
-sudo dnf remove -y "${UNWANTED_PACKAGES[@]}"
+sudo dnf remove -y "${unwanted_packages[@]}"
 
 # Install RPM Fusion repositories
 sudo dnf install -y \
