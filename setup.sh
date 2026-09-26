@@ -87,6 +87,18 @@ EOF
 
 sudo dnf install -y code
 
+# Install Crush
+sudo tee /etc/yum.repos.d/charm.repo <<-'EOF' >/dev/null
+	[charm]
+	name=Charm
+	baseurl=https://repo.charm.sh/yum
+	enabled=1
+	gpgcheck=1
+	gpgkey=https://repo.charm.sh/yum/gpg.key
+EOF
+
+sudo dnf install -y crush
+
 # Install GitHub CLI
 sudo dnf config-manager addrepo --from-repofile=https://cli.github.com/packages/rpm/gh-cli.repo
 sudo dnf install -y gh
