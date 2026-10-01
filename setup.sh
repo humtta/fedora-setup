@@ -140,6 +140,9 @@ sudo dnf install -y fish
 # Set Fish as default shell
 sudo usermod --shell "$(which fish)" "${USER}"
 
+# Install Foot
+sudo dnf install -y foot
+
 # Install Zen
 sudo dnf copr enable -y sneexy/zen-browser
 sudo dnf install -y zen-browser
