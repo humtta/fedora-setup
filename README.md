@@ -12,6 +12,20 @@ Open a terminal and run the following command:
 bash -c "$(curl -fsSL https://github.com/humtta/fedora-setup/raw/main/boot.sh)"
 ```
 
+### Manual
+
+First, clone the repository:
+
+```sh
+git clone https://github.com/humtta/fedora-setup
+```
+
+Then, run the setup script from the cloned directory:
+
+```sh
+./setup.sh
+```
+
 ## License
 
 This project is licensed under the [MIT License].
