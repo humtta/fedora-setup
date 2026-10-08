@@ -2,7 +2,7 @@
 
 A Bash script to automate the setup of a new [Fedora Workstation] installation.
 
-## Usage
+## Installation
 
 ### One-line
 
