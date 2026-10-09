@@ -142,3 +142,9 @@ sudo dnf install -y https://proton.me/download/PassDesktop/linux/x64/ProtonPass.
 
 # Install Proton Authenticator
 sudo dnf install -y https://proton.me/download/authenticator/linux/ProtonAuthenticator.rpm
+
+# Install configuration files
+dotfiles_repo_dir="${HOME}/Git/humtta/dotfiles"
+
+git clone https://github.com/humtta/dotfiles "${dotfiles_repo_dir}"
+bash "${dotfiles_repo_dir}/setup.sh"
