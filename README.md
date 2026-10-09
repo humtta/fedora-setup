@@ -43,6 +43,12 @@ complete the system setup:
    echo '966EB8F0EADF8CF5156BC3704394243BBBC1AADD:6:' | gpg --import-ownertrust
    ```
 
+3. Authenticate `gh` with GitHub:
+
+   ```sh
+   gh auth login -p https -h github.com -w
+   ```
+
 ## License
 
 This project is licensed under the [MIT License].
