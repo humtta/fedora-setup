@@ -26,6 +26,23 @@ Then, run the setup script from the cloned directory:
 ./setup.sh
 ```
 
+## Post-installation
+
+After running the script, restart your computer and follow these steps to
+complete the system setup:
+
+1. Import the GPG key, replacing `PATH` with the private key path:
+
+   ```sh
+   gpg --import PATH
+   ```
+
+2. Assign the highest trust level to the GPG key:
+
+   ```sh
+   echo '966EB8F0EADF8CF5156BC3704394243BBBC1AADD:6:' | gpg --import-ownertrust
+   ```
+
 ## License
 
 This project is licensed under the [MIT License].
