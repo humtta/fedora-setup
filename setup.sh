@@ -79,6 +79,9 @@ EOF
 
 sudo dnf install -y code
 
+# Install Zed in ~/.local/bin
+curl -fsSL https://zed.dev/install.sh | bash
+
 # Install GitHub CLI
 sudo dnf config-manager addrepo --from-repofile=https://cli.github.com/packages/rpm/gh-cli.repo
 sudo dnf install -y gh
