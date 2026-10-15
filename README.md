@@ -53,5 +53,5 @@ complete the system setup:
 
 This project is licensed under the [MIT License].
 
-[Fedora Workstation]: https://fedoraproject.org/workstation
+[fedora workstation]: https://fedoraproject.org/workstation
 [mit license]: LICENSE.md
