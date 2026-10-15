@@ -82,6 +82,9 @@ sudo dnf install -y code
 # Install Zed in ~/.local/bin
 curl -fsSL https://zed.dev/install.sh | bash
 
+# Install OpenCode in ~/.opencode/bin
+curl -fsSL https://opencode.ai/v2/install | bash -s -- --no-modify-path
+
 # Install GitHub CLI
 sudo dnf config-manager addrepo --from-repofile=https://cli.github.com/packages/rpm/gh-cli.repo
 sudo dnf install -y gh
