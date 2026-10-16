@@ -4,6 +4,16 @@ A Bash script to automate the setup of a new [Fedora Workstation] installation.
 
 ## Installation
 
+> [!NOTE]
+> One of the things the setup script does is install the configuration files
+> from the [humtta/dotfiles] repository. Some of these files use hardcoded paths
+> under `/home/humtta`. If your home directory is different, create a symbolic
+> link that points to it:
+>
+> ```sh
+> sudo ln -s "$HOME" /home/humtta
+> ```
+
 ### One-line
 
 Open a terminal and run the following command:
@@ -54,4 +64,5 @@ complete the system setup:
 This project is licensed under the [MIT License].
 
 [fedora workstation]: https://fedoraproject.org/workstation
+[humtta/dotfiles]: https://github.com/humtta/dotfiles
 [mit license]: LICENSE.md
