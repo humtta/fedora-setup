@@ -126,10 +126,6 @@ sudo dnf install -y foot
 sudo dnf copr enable -y sneexy/zen-browser
 sudo dnf install -y zen-browser
 
-# Install Helium
-sudo dnf copr enable -y imput/helium
-sudo dnf install -y helium-bin
-
 # Install Obsidian
 sudo dnf copr enable -y kmf/Obsidian
 sudo dnf install -y obsidian
