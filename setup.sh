@@ -105,6 +105,11 @@ sudo dnf install -y fish
 # Set Fish as default shell
 sudo usermod --shell "$(which fish)" "${USER}"
 
+# Install CLI utilities
+sudo dnf install -y \
+	eza \
+	bat
+
 # Install Foot
 sudo dnf install -y foot
 
