@@ -108,7 +108,8 @@ sudo usermod --shell "$(which fish)" "${USER}"
 # Install CLI utilities
 sudo dnf install -y \
 	eza \
-	bat
+	bat \
+	git-delta
 
 # Install Foot
 sudo dnf install -y foot
