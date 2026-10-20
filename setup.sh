@@ -109,7 +109,8 @@ sudo usermod --shell "$(which fish)" "${USER}"
 sudo dnf install -y \
 	eza \
 	bat \
-	git-delta
+	git-delta \
+	direnv
 
 # Install Foot
 sudo dnf install -y foot
