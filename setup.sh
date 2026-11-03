@@ -71,8 +71,8 @@ sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flat
 # Update installed packages
 sudo dnf update -y --refresh
 
-# Install Zed in ~/.local/bin
-curl -fsSL https://zed.dev/install.sh | bash
+# Install Zed
+sudo dnf install -y zed
 
 # Install OpenCode in ~/.opencode/bin
 curl -fsSL https://opencode.ai/v2/install | bash -s -- --no-modify-path
