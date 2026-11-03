@@ -65,6 +65,12 @@ complete the system setup:
    sudo dnf remove -y ptyxis
    ```
 
+5. Update installed packages:
+
+   ```sh
+   sudo dnf update -y --refresh
+   ```
+
 ## License
 
 This project is licensed under the [MIT License].
