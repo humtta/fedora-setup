@@ -71,9 +71,6 @@ sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flat
 # Update installed packages
 sudo dnf update -y --refresh
 
-# Install Git LFS
-sudo dnf install -y git-lfs
-
 # Install Zed in ~/.local/bin
 curl -fsSL https://zed.dev/install.sh | bash
 
