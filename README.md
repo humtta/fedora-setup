@@ -59,6 +59,12 @@ complete the system setup:
    gh auth login -p https -h github.com -w
    ```
 
+4. Remove the default terminal emulator:
+
+   ```sh
+   sudo dnf remove -y ptyxis
+   ```
+
 ## License
 
 This project is licensed under the [MIT License].
