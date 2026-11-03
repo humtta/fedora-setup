@@ -116,7 +116,6 @@ sudo dnf install -y \
 sudo dnf install -y foot
 
 # Install Zen
-sudo dnf copr enable -y sneexy/zen-browser
 sudo dnf install -y zen-browser
 
 # Install Obsidian
