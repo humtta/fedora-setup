@@ -105,6 +105,13 @@ sudo dnf install -y fish
 # Set Fish as default shell
 sudo usermod --shell "$(which fish)" "${USER}"
 
+# Install Niri and Dux Shell
+sudo dnf install -y \
+	niri \
+	dms
+
+systemctl --user add-wants niri.service dms
+
 # Install CLI utilities
 sudo dnf install -y \
 	eza \
