@@ -141,3 +141,9 @@ dotfiles_repo_dir="${HOME}/Git/humtta/dotfiles"
 
 git clone https://github.com/humtta/dotfiles "${dotfiles_repo_dir}"
 bash "${dotfiles_repo_dir}/setup.sh"
+
+# Install OpenCode Sandbox
+ocs_repo_dir="${HOME}/Git/humtta/opencode-sandbox"
+
+git clone https://github.com/humtta/opencode-sandbox "${ocs_repo_dir}"
+ln -fs "${ocs_repo_dir}/opencode.sh" "${HOME}/.local/bin/ocs"
