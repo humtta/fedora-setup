@@ -118,7 +118,8 @@ sudo dnf install -y \
 	bat \
 	git-delta \
 	direnv \
-	micro
+	micro \
+	wl-clipboard
 
 # Install Foot
 sudo dnf install -y foot
