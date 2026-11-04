@@ -117,7 +117,8 @@ sudo dnf install -y \
 	eza \
 	bat \
 	git-delta \
-	direnv
+	direnv \
+	micro
 
 # Install Foot
 sudo dnf install -y foot
