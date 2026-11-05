@@ -47,9 +47,11 @@ if [[
 fi
 
 # Disable sudo timeout
+info 'Disabling sudo timeout'
 echo 'Defaults timestamp_timeout = -1' | sudo tee /etc/sudoers.d/timeout >/dev/null
 
 # Remove unwanted packages
+info 'Removing unwanted packages'
 unwanted_packages=(
 	baobab
 	firefox*
@@ -84,36 +86,45 @@ unwanted_packages=(
 sudo dnf remove -y "${unwanted_packages[@]}"
 
 # Install RPM Fusion repositories
+info 'Installing RPM Fusion repositories'
 sudo dnf install -y \
 	"https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-${VERSION_ID}.noarch.rpm" \
 	"https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-${VERSION_ID}.noarch.rpm"
 
 # Install Terra repository
+info 'Installing Terra repository'
 sudo dnf install -y \
 	--repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' \
 	--setopt 'terra.gpgkey=https://repos.fyralabs.com/terra$releasever/key.asc' \
 	terra-release
 
 # Install Flathub repository
+info 'Installing Flathub repository'
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # Update installed packages
+info 'Updating installed packages'
 sudo dnf update -y --refresh
 
 # Install Zed
+info 'Installing Zed'
 sudo dnf install -y zed
 
 # Install GitHub CLI
+info 'Installing GitHub CLI'
 sudo dnf config-manager addrepo --from-repofile=https://cli.github.com/packages/rpm/gh-cli.repo
 sudo dnf install -y gh
 
 # Install Nix
+info 'Installing Nix'
 curl -fsSL https://install.determinate.systems/nix | sudo bash -s -- install --no-confirm
 
 # Install Devbox
+info 'Installing Devbox'
 curl -fsSL https://get.jetify.com/devbox | sudo bash -s -- -f
 
 # Install Docker
+info 'Installing Docker'
 sudo dnf config-manager addrepo --from-repofile=https://download.docker.com/linux/fedora/docker-ce.repo
 sudo dnf install -y \
 	docker-ce \
@@ -123,25 +134,32 @@ sudo dnf install -y \
 	docker-compose-plugin
 
 # Enable Docker to start at OS boot
+info 'Enabling Docker to start at OS boot'
 sudo systemctl enable --now docker
 
 # Enable Docker usage without sudo
+info 'Enabling Docker usage without sudo'
 sudo gpasswd --add "${USER}" docker
 
 # Install Fish
+info 'Installing Fish'
 sudo dnf install -y fish
 
 # Set Fish as default shell
+info 'Setting Fish as default shell'
 sudo usermod --shell "$(which fish)" "${USER}"
 
 # Install Niri and Dux Shell
+info 'Installing Niri and Dux Shell'
 sudo dnf install -y \
 	niri \
 	dms
 
+info 'Adding Dux Shell to Niri startup'
 systemctl --user add-wants niri.service dms
 
 # Install CLI utilities
+info 'Installing CLI utilities'
 sudo dnf install -y \
 	eza \
 	bat \
@@ -151,28 +169,35 @@ sudo dnf install -y \
 	wl-clipboard
 
 # Install Foot
+info 'Installing Foot'
 sudo dnf install -y foot
 
 # Install Zen
+info 'Installing Zen'
 sudo dnf install -y zen-browser
 
 # Install Obsidian
+info 'Installing Obsidian'
 sudo dnf copr enable -y kmf/Obsidian
 sudo dnf install -y obsidian
 
 # Install Proton Pass
+info 'Installing Proton Pass'
 sudo dnf install -y https://proton.me/download/PassDesktop/linux/x64/ProtonPass.rpm
 
 # Install Proton Authenticator
+info 'Installing Proton Authenticator'
 sudo dnf install -y https://proton.me/download/authenticator/linux/ProtonAuthenticator.rpm
 
 # Install configuration files
+info 'Cloning and installing configuration files'
 dotfiles_repo_dir="${HOME}/Git/humtta/dotfiles"
 
 git clone https://github.com/humtta/dotfiles "${dotfiles_repo_dir}"
 bash "${dotfiles_repo_dir}/setup.sh"
 
 # Install OpenCode Sandbox
+info 'Cloning and installing OpenCode Sandbox'
 ocs_repo_dir="${HOME}/Git/humtta/opencode-sandbox"
 
 git clone https://github.com/humtta/opencode-sandbox "${ocs_repo_dir}"
