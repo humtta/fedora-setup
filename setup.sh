@@ -24,6 +24,10 @@ info() {
 	echo -e "${blue_bold}INFO${reset} ${@}"
 }
 
+# Log all output to a temporary file
+log_file="$(mktemp '/tmp/fedora-setup.XXXXXX.log')"
+exec > >(tee "${log_file}") 2>&1
+
 # Print header
 echo
 echo -e "${blue}╔═╗╔═╗╔╦╗╔═╗╦═╗╔═╗${black} ╔═╗╔═╗╔╦╗╦ ╦╔═╗${reset}"
