@@ -42,7 +42,7 @@ if [[
 	"${VARIANT_ID}" != 'workstation' || \
 	"${VERSION_ID}" != "${required_version}"
 ]]; then
-	echo "Error: this script is intended for Fedora Workstation ${required_version} only" >&2
+	error "This script is intended for Fedora Workstation ${required_version} only"
 	exit 1
 fi
 
