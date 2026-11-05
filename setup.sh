@@ -6,6 +6,7 @@ black='\e[0;30m'
 blue='\e[0;34m'
 
 red_bold='\e[1;31m'
+blue_bold='\e[1;34m'
 
 reset='\e[0m'
 
@@ -14,6 +15,13 @@ reset='\e[0m'
 # Prints MESSAGE with the prefix ERROR to stderr.
 error() {
 	echo -e "${red_bold}ERROR${reset} ${@}" >&2
+}
+
+# Usage: info MESSAGE
+#
+# Prints MESSAGE with the prefix INFO to stdout.
+info() {
+	echo -e "${blue_bold}INFO${reset} ${@}"
 }
 
 # Print header
