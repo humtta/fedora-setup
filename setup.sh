@@ -2,6 +2,17 @@
 
 set -eo pipefail
 
+black='\e[0;30m'
+blue='\e[0;34m'
+reset='\e[0m'
+
+# Print header
+echo
+echo -e "${blue}╔═╗╔═╗╔╦╗╔═╗╦═╗╔═╗${black} ╔═╗╔═╗╔╦╗╦ ╦╔═╗${reset}"
+echo -e "${blue}╠╣ ╠╣  ║║║ ║╠╦╝╠═╣${black} ╚═╗╠╣  ║ ║ ║╠═╝${reset}"
+echo -e "${blue}╚  ╚═╝═╩╝╚═╝╩╚═╩ ╩${black} ╚═╝╚═╝ ╩ ╚═╝╩  ${reset}"
+echo
+
 # Load OS release information
 source /etc/os-release
 
