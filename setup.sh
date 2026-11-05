@@ -4,7 +4,17 @@ set -eo pipefail
 
 black='\e[0;30m'
 blue='\e[0;34m'
+
+red_bold='\e[1;31m'
+
 reset='\e[0m'
+
+# Usage: error MESSAGE
+#
+# Prints MESSAGE with the prefix ERROR to stderr.
+error() {
+	echo -e "${red_bold}ERROR${reset} ${@}" >&2
+}
 
 # Print header
 echo
