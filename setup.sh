@@ -36,6 +36,9 @@ abort() {
 	exit 1
 }
 
+# Abort script on error
+trap abort ERR
+
 # Print header
 echo
 echo -e "${blue}╔═╗╔═╗╔╦╗╔═╗╦═╗╔═╗${black} ╔═╗╔═╗╔╦╗╦ ╦╔═╗${reset}"
