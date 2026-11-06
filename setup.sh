@@ -10,6 +10,10 @@ blue_bold='\e[1;34m'
 
 reset='\e[0m'
 
+# Log all output to a temporary file
+log_file="$(mktemp '/tmp/fedora-setup.XXXXXX.log')"
+exec > >(tee "${log_file}") 2>&1
+
 # Usage: error MESSAGE
 #
 # Prints MESSAGE with the prefix ERROR to stderr.
@@ -23,10 +27,6 @@ error() {
 info() {
 	echo -e "${blue_bold}INFO${reset} ${@}"
 }
-
-# Log all output to a temporary file
-log_file="$(mktemp '/tmp/fedora-setup.XXXXXX.log')"
-exec > >(tee "${log_file}") 2>&1
 
 # Usage: abort
 #
