@@ -220,6 +220,6 @@ ln -fs "${ocs_repo_dir}/opencode.sh" "${HOME}/.local/bin/ocs"
 
 # Print setup completion message
 echo
-echo 'The script has completed successfully. Now, follow the post-installation
+info 'The script has completed successfully. Now, follow the post-installation
 steps outlined at https://github.com/humtta/fedora-setup#post-installation to
 complete the setup.'
