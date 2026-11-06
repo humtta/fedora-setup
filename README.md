@@ -38,8 +38,7 @@ Then, run the setup script from the cloned directory:
 
 ## Post-installation
 
-After running the script, restart your computer and follow these steps to
-complete the system setup:
+After running the script, follow these steps to complete the system setup:
 
 1. Import the GPG key, replacing `PATH` with the private key path:
 
@@ -70,6 +69,8 @@ complete the system setup:
    ```sh
    sudo dnf update -y --refresh
    ```
+
+6. Restart the computer.
 
 ## License
 
