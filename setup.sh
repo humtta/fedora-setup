@@ -28,6 +28,14 @@ info() {
 log_file="$(mktemp '/tmp/fedora-setup.XXXXXX.log')"
 exec > >(tee "${log_file}") 2>&1
 
+# Usage: abort
+#
+# Prints a generic error message and exits the script.
+abort() {
+	error "The script failed unexpectedly. For more details, check the logs in ${log_file}"
+	exit 1
+}
+
 # Print header
 echo
 echo -e "${blue}╔═╗╔═╗╔╦╗╔═╗╦═╗╔═╗${black} ╔═╗╔═╗╔╦╗╦ ╦╔═╗${reset}"
