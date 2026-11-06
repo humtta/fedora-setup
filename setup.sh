@@ -217,3 +217,9 @@ ocs_repo_dir="${HOME}/Git/humtta/opencode-sandbox"
 
 git clone https://github.com/humtta/opencode-sandbox "${ocs_repo_dir}"
 ln -fs "${ocs_repo_dir}/opencode.sh" "${HOME}/.local/bin/ocs"
+
+# Print setup completion message
+echo
+echo 'The script has completed successfully. Now, follow the post-installation
+steps outlined at https://github.com/humtta/fedora-setup#post-installation to
+complete the setup.'
